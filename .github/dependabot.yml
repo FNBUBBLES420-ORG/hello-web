@@ -1,0 +1,11 @@
+# .github/dependabot.yml
+# Configuration for Dependabot Version Updates
+
+version: 2
+updates:
+  - package-ecosystem: "docker" # For Docker ecosystem
+    directory: "/" # Root directory where Dockerfile is located
+    schedule:
+      interval: "daily" # Frequency of update checks
+    # Optional: Limit the number of open pull requests
+    open-pull-requests-limit: 10
