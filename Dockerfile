@@ -1,8 +1,9 @@
-# Use an official Nginx image
 FROM nginx:alpine
 
-# Update package repositories and install OpenSSL
-RUN apk update && apk upgrade && apk add --no-cache openssl
+# Update package repositories and install the latest versions of expat, curl, and openssl
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache openssl expat curl
 
 # Copy the HTML file to the Nginx default location
 COPY index.html /usr/share/nginx/html/index.html
