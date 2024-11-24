@@ -1,6 +1,7 @@
-FROM nginx:alpine
+# Use a stable version of Nginx based on Alpine Linux
+FROM nginx:stable-alpine
 
-# Update package repositories and install the latest versions of expat, curl, and openssl
+# Update package repositories and install necessary packages
 RUN apk update && \
     apk upgrade && \
     apk add --no-cache openssl expat curl
